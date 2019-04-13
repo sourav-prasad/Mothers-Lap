@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+	  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="Vikkey" content="BIT Patna Smart Room">
+	  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+     
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+      <title>Mother's Lap Play School</title></head>
+	  <body bgcolor="#FFE4E1">
+	  <img src="logo.png" height="202" width="192" style="float: left;" />
+
+   <center>
+	   	  <img src="iot.png" height="320" width="402" style="float: right;" />
+	          <h1 style="font-family: Helvetica;color: black;">Mother's Lap Play School : Official Website</h1>
+   </center>
+   
+   <div class="center">
+	<div align="center" class="form">
+       <form action="" method="get">
+              &#128161 <a href="www.mithila.com" target= "_blank" class="button"> Test</a>
+	      
+	      <br> 
+        </form>
+		<br><br>
+	 </div>
+	</div>
+	
+	<footer class="footer">
+		<center>
+			<h4 style="font-family: Helvetica;color: black;">&copy; 2019 | <a href="http://google.in">Mother's Lap Play School</a> | <a href="http://www.facebook.com">Facebook Page</a> </h4>
+		</center>
+	</footer>
+ 
+    </body>
+	<script>
+		document.getElementById('D1-on').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field1=1"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+		
+		document.getElementById('D1-off').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field1=0"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+		
+		
+		document.getElementById('D2-on').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field2=1"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+		
+		document.getElementById('D2-off').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field2=0"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+ 
+		
+	</script>
+</html>
